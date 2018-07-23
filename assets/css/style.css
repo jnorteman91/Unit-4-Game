@@ -1,0 +1,20 @@
+body{
+    background-image: url(assets/images/background.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron{
+    text-align: center;
+    margin-top: 15px;
+}
+.panel-header{
+    background-color: rgb(197, 196, 193);
+}
+
+#panelStyle{
+    float: left;
+    margin: 10px 20px 10px 5px;
+}
