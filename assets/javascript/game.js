@@ -41,7 +41,7 @@ function winner(){
 function loser(){
     alert("You've Lost!");
         loss++;
-        $("lossCount").text(loss);
+        $("#lossCount").text(loss);
         reset();
 }
 
