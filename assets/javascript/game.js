@@ -1,5 +1,6 @@
 $(document).ready(function(){
     var Random = Math.floor(Math.random() * 120 + 19)
+    console.log(Random);
     $("#number").text(Random);
 
 var genNumbers = [];
@@ -10,20 +11,22 @@ var loss = 0;
 $("#winCount").text(win);
 $("#lossCount").text(loss);
 
-function RandomNumbers(){
+function fourRandomNumbers(){
     for (var i = 0; i < 4; i++) {
         var num = Math.floor(Math.random() * 11 +1);
+        console.log(num)
         genNumbers.push(num);
     }
+    console.log(genNumbers)
 }
 
-RandomNumbers();
+fourRandomNumbers();
 
 function reset(){
     Random = Math.floor(Math.random() * 120 + 19)
     $("#number").text(Random);
     genNumbers = [];
-    RandomNumbers();
+    fourRandomNumbers();
     combined = 0;
     $("#total").text(combined);
 }
@@ -37,12 +40,12 @@ function winner(){
 
 function loser(){
     alert("You've Lost!");
-    loss++;
-    $("lossCount").text(loss);
-    reset();
+        loss++;
+        $("lossCount").text(loss);
+        reset();
 }
 
-    $("j1").on("click", function(){
+    $("#j1").on("click", function(){
         combined = combined + genNumbers[0];
         $("#total").text(combined);
 
@@ -54,7 +57,7 @@ function loser(){
             }
     })
 
-    $("j2").on("click", function(){
+    $("#j2").on("click", function(){
         combined = combined + genNumbers[1];
         $("#total").text(combined);
 
@@ -66,7 +69,7 @@ function loser(){
             }
     })
 
-    $("j3").on("click", function(){
+    $("#j3").on("click", function(){
         combined = combined + genNumbers[2];
         $("#total").text(combined);
 
@@ -78,7 +81,7 @@ function loser(){
             }
     })
 
-    $("j4").on("click", function(){
+    $("#j4").on("click", function(){
         combined = combined + genNumbers[3];
         $("#total").text(combined);
 
