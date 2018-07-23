@@ -42,4 +42,52 @@ function loser(){
     reset();
 }
 
+    $("j1").on("click", function(){
+        combined = combined + genNumbers[0];
+        $("#total").text(combined);
+
+            if (combined == Random){
+                winner();
+            }
+            else if(combined > Random){
+                loser();
+            }
+    })
+
+    $("j2").on("click", function(){
+        combined = combined + genNumbers[1];
+        $("#total").text(combined);
+
+            if (combined == Random){
+                winner();
+            }
+            else if(combined > Random){
+                loser();
+            }
+    })
+
+    $("j3").on("click", function(){
+        combined = combined + genNumbers[2];
+        $("#total").text(combined);
+
+            if (combined == Random){
+                winner();
+            }
+            else if(combined > Random){
+                loser();
+            }
+    })
+
+    $("j4").on("click", function(){
+        combined = combined + genNumbers[3];
+        $("#total").text(combined);
+
+            if (combined == Random){
+                winner();
+            }
+            else if(combined > Random){
+                loser();
+            }
+    });
+
 })
